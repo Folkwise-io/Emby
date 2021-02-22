@@ -52,5 +52,5 @@ const boot = (botToken) => {
 };
 
 module.exports = {
-  run: boot,
+  boot,
 };

@@ -1,5 +1,5 @@
 const dotenv = require("dotenv");
-const { run } = require("./bot/bot");
+const { boot } = require("./bot/bot");
 dotenv.config();
 
-run(process.env.BOT_TOKEN);
+boot(process.env.BOT_TOKEN);

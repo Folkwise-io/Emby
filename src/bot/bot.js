@@ -1,5 +1,6 @@
 // Required Modules
 const fs = require("fs");
+const path = require("path");
 const Discord = require("discord.js");
 const { getConfig } = require("../../config");
 
@@ -9,7 +10,7 @@ const client = new Discord.Client();
 // set up commands
 client.commands = new Discord.Collection();
 const commandFiles = fs
-  .readdirSync("./commands")
+  .readdirSync(path.resolve(__dirname, "./commands"))
   .filter((file) => file.endsWith(".js"));
 
 for (const file of commandFiles) {
@@ -35,7 +36,7 @@ const boot = (botToken) => {
 
     if (!client.commands.has(command)) {
       message.reply("Emby is sorry, but that command doesn't exist.");
-			return;
+      return;
     }
 
     try {

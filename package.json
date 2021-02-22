@@ -14,7 +14,9 @@
   "author": "Kyle Barnett, Mintbean Team",
   "license": "ISC",
   "dependencies": {
-    "discord.js": "^12.5.1"
+    "discord.js": "^12.5.1",
+    "dotenv": "^8.2.0",
+    "esm": "^3.2.25"
   },
   "devDependencies": {
     "eslint": "^7.20.0"
